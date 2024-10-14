@@ -1,0 +1,21 @@
+<div class="main-content-title">
+    <h2>Gerenciar exames</h2>
+</div>
+<div class="panel-row">
+    <%= link_to new_exam_path, class: "panel panel-50" do %>
+      <i class="fas fa-plus i-white"></i>
+          Marcar Exame
+    <% end %>
+
+    <%= link_to proximo_exame_exams_path, class: "panel panel-50" do %>
+      <i class="fas fa-table i-white"></i>
+        Visualizar Próximo Exame
+    <% end %>
+</div>
+
+<div class="panel-row">
+     <%= link_to meus_exames_exams_path, class: "panel panel-50" do %>
+      <i class="fas fa-table i-white"></i>
+        Visualizar Todos os Exames
+    <% end %>
+</div>

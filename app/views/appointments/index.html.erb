@@ -1,0 +1,21 @@
+<div class="main-content-title">
+    <h2>Gerenciar consultas</h2>
+</div>
+<div class="panel-row">
+    <%= link_to new_appointment_path, class: "panel panel-50" do %>
+      <i class="fas fa-plus i-white"></i>
+          Adicionar Consulta
+    <% end %>
+
+    <%= link_to proxima_consulta_appointments_path, class: "panel panel-50" do %>
+      <i class="fas fa-table i-white"></i>
+          Visualizar Próxima Consulta
+    <% end %>
+</div>
+
+<div class="panel-row">
+    <%= link_to minhas_consultas_appointments_path, class: "panel panel-50" do %>
+      <i class="fas fa-table i-white"></i>
+          Visualizar Todas as Consultas
+    <% end %>
+</div>

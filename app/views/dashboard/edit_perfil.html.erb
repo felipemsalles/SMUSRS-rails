@@ -1,0 +1,23 @@
+<div class="main-content-title">
+  <h2>EDITAR PERFIL</h2>
+</div>
+
+<%= simple_form_for(@user, method: :patch, url: dashboard_editar_perfil_path) do |f| %>
+  <div class="form-group">
+    <%= f.input :name, label: 'Nome', placeholder: "Nome Completo" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :email %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :age, label: 'Idade', placeholder: "Idade" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :gender, label: 'Gênero', collection: [["masculino", 'Masculino'], ["feminino", 'Feminino']], label_method: :second, value_method: :first, prompt: "Selecione..." %>
+  </div>
+
+  <%= f.submit 'Atualizar' %>
+<% end %>

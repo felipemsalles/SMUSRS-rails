@@ -1,0 +1,135 @@
+/*hero*/
+#hero {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+  text-emphasis-color:black;
+}
+.main-btn {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+ .main-btn:hover {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: 2px solid linear-gradient(135deg, #6e8efb, #a777e3);
+  text-decoration: none;
+  color:#fff;
+}
+
+#hero .container {
+  padding-top: 80px;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.conteudo{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.dentro{
+  margin-left: 80px;
+}
+#destaque{
+  font-weight: bolder;
+  margin:20px;
+}
+.leis {
+  box-sizing: inherit;
+  font-family: Arial, Helvetica;
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing:
+  antialiased;
+  margin: 40px;
+
+}
+.artigos{
+
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 60px;
+  margin-inline-end: 0px;
+
+}
+.meio{
+  display: block;
+  margin-block-start: 1.2em;
+  margin-block-end: 1.2em;
+  margin-inline-start: 70px;
+  margin-inline-end: 0px;
+  font-style: italic;
+}
+.botao-denuncia {
+  margin: 0 auto;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.botao-denuncia:hover {
+  color: black;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cor{
+  color: #000;
+}
+.botao:hover {
+  background-image: -webkit-linear-gradient(top, #6386be, #3D94F6);
+  background-image: linear-gradient(135deg, #778dd6, #68b1db);
+  text-decoration: none;
+}
+
+

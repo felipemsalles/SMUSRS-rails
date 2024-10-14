@@ -1,0 +1,37 @@
+<div class="main-content-title">
+  <h2>PERFIL</h2> <%= link_to "Editar Perfil", dashboard_editar_perfil_path %>
+</div>
+
+<br>
+
+<h5>Nome</h5>
+<div><%= @user.name %></div>
+
+<br>
+
+<h5>Email</h5>
+<div><%= @user.email %></div>
+
+<br>
+
+<h5>Idade</h5>
+<div><%= @user.age %></div>
+
+<br>
+
+<h5>Gênero</h5>
+<div><%= @user.gender.capitalize %></div>
+
+<br>
+
+<h5>Gênero</h5>
+<div><%= @user.gender.capitalize %></div>
+
+<br>
+
+<h5>Imagem</h5>
+<% if @user.gender == "masculino" %>
+  <%= image_tag "boy.png" %>
+<% else %>
+  <%= image_tag "girl.png" %>
+<% end %>

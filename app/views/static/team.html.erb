@@ -1,0 +1,124 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative">
+    <%= image_tag 'grupo.png' %>
+    <h1>Juntos na batalha contra o HIV!</h1>
+    <h2>Serviço disponível 24 horas.</h2>
+    <%= link_to "Meu perfil", dashboard_path, class: "main-btn" %>
+  </div>
+</section>
+<section id="conteudo">
+  <div class="container">
+    <div class="section-title">
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <div class="service shadow">
+          <div class="icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Quem somos?</h4>
+          <p>Um grupo de estudantes graduandos em Ciências da Computação!</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="service c shadow">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h4><a href=""></a>Motivação</a></h4>
+          <p> A motivação do nosso projeto é criar um site modelo para que ajude em outras causas futuramente. </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="service shadow">
+          <div class="icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Principal função</h4>
+          <p>Esse projeto tem como principal objetivo ajudar você no combate a doença!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<section id="parte2">
+  <div class="cont">
+    <div class="dest">Objetivos do Projeto</div>
+  </div>
+  <div class="conteudo">
+    <p>
+      O projeto foi criado para a disciplina de Arquitetura de Computadores. A ideia proposta no projeto é
+      utilizar do conceito de Arquitetura
+      para realizar uma ideia que, ao mesmo tempo, explore o conceito em sua totalidade e, acrescente para a
+      população.
+    </p>
+    <p>
+      Entretanto, o projeto é bem mais do que parece, a arquitetura do site foi construida pensando em ser
+      adaptável para expansões
+      focadas em outros cunhos sociais. Por isso, estamos abertos a ideias. O nosso lema é: Estamos sempre em
+      mudança, sempre adicionando
+      novas funcionalidades para o nosso site.
+    </p>
+    <p>
+      O projeto é coletivo, por isso, te convidamos a participar com a sua opinião. Como podemos te ajudar?
+    </p>
+    <p>
+      Se você trabalha na área da saúde e gostaria de fazer parte do nosso time, como podemos realizar uma
+      parceria?
+    </p>
+  </div>
+</section>
+
+<section id="parte3">
+  <div class="cont">
+    <div class="dest">Envie sua ideia</div>
+  </div>
+  <div class="container">
+    <div class="section-title text-center mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-box">
+                <i class="fas fa-comments"></i>
+                <h5>Conte para nós como podemos expandir o projeto </h5>
+              </div>
+            </div>
+            <div>
+              <%= image_tag "we.png" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-align-none">
+          <%= simple_form_for(@idea, method: :post, url: enviar_ideia_path, remote: true) do |f| %>
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <%= f.input :name, class: "form-control", placeholder: "Nome" %>
+              </div>
+              <div class="col-md-6 form-group">
+                <%= f.input :email, class: "form-control", placeholder: "E-mail" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.input :subject, collection: idea_types, label_method: :second, value_method: :first %>
+            </div>
+            <div class="form-group">
+              <%= f.input :person, collection: idea_functions, label_method: :second, value_method: :first %>
+            </div>
+            <div class="form-group">
+              <%= f.input :message, class: "form-control", placeholder: "Sua mensagem" %>
+            </div>
+            <div class="cont">
+              <%= f.button :submit, "Enviar Ideia", id: "idea-button", class: "doubt-button" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

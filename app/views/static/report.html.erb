@@ -1,0 +1,106 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative">
+    <%= image_tag 'denuncia.png' %>
+    <h1>Juntos na batalha contra o HIV!</h1>
+    <h2>Serviço disponível 24 horas.</h2>
+    <%= link_to "Meu perfil", dashboard_path, class: "main-btn" %>
+  </div>
+</section>
+
+<div class="conteudo">
+    <p>
+        Desde 1996, o Brasil distribui de forma gratuíta pelo Sistema Único de Saúde (SUS)
+        todos os medicamentos antirretrovirais e, desde 2013, o SUS garante tratamento para
+        todas as pessoas vivendo com HIV (PVHIV), independentemente da carga viral.
+    </p>
+    <p>
+        Seguem abaixo os artigos que garantem um tratamento aos pacientes:
+    </p>
+    <p id="destaque">
+        Lei 8.080/90, escrita em 19 de setembro de 1990.
+    </p>
+    <p class="leis">
+        Art. 6º : Estão incluídas ainda no campo de atuação do Sistema Único de Saúde (SUS):
+    </p>
+    <div id ="bloco1" class="artigos">
+        I - a execução de ações:
+        <p class="meio">
+            d) de assistência terapêutica integral, inclusive farmacêutica;
+        </p>
+    </div>
+
+    <p class="leis">
+        Art. 7º: As ações e serviços públicos de saúde e os serviços privados contratados ou conveniados
+        que integram o Sistema Único de Saúde (SUS), são desenvolvidos de acordo com as diretrizes previstas no art. 198
+        da Constituição Federal, obedecendo ainda aos seguintes princípios:
+    </p>
+
+    <div id= "bloco" class="artigos">
+        <p>
+            I - universalidade de acesso aos serviços de saúde em todos os níveis de assistência;
+        </p>
+
+        <p>
+            II - integralidade de assistência, entendida como conjunto articulado e contínuo das ações
+            e serviços preventivos e curativos, individuais e coletivos, exigidos para cada caso em todos
+            os níveis de complexidade do sistema;
+
+        </p>
+        <p>
+            III - preservação da autonomia das pessoas na defesa de sua integridade física e moral;
+        </p>
+
+        <p>
+            IV - igualdade da assistência à saúde, sem preconceitos ou privilégios de qualquer espécie;
+        </p>
+        <p>
+            V - direito à informação, às pessoas assistidas, sobre sua saúde
+        </p>
+
+        <p>
+            VI - divulgação de informações quanto ao potencial dos serviços de saúde e a sua utilização pelo usuário;
+        </p>
+        <p>
+            VII - utilização da epidemiologia para o estabelecimento de prioridades, a alocação de recursos e a
+            orientação programática;
+        </p>
+        <p>
+            VIII - participação da comunidade;
+        </p>
+        <p>
+            IX - descentralização político-administrativa, com direção única em cada esfera de governo:
+        </p>
+        <p class="meio">
+            a) ênfase na descentralização dos serviços para os municípios;
+        </p>
+        <p class="meio">
+             b) regionalização e hierarquização da rede de serviços de saúde;
+        </p>
+        <p>
+            X - integração em nível executivo das ações de saúde, meio ambiente e saneamento básico;
+        </p>
+        <p>
+            XI - conjugação dos recursos financeiros, tecnológicos, materiais e humanos da União, dos Estados, do Distrito
+             Federal e dos Municípios na prestação de serviços de assistência à saúde da população;
+        </p>
+        <p>
+            XII - capacidade de resolução dos serviços em todos os níveis de assistência; e
+        </p>
+        <p>
+            XIII - organização dos serviços públicos de modo a evitar duplicidade de meios para fins idênticos.
+        </p>
+        <p>
+            XIV - organização de atendimento público específico e especializado para mulheres e vítimas de violência doméstica
+            em geral, que garanta, entre outros, atendimento, acompanhamento psicológico e cirurgias plásticas reparadoras, em
+            conformidade com a Lei nº 12.845, de 1º de agosto de 2013. (Redação dada pela Lei nº 13.427, de 2017)
+        </p>
+    </div>
+
+    <div class="dentro">
+        Em caso de transgressão da lei, clique no botão abaixo para denunciar.
+    </div>
+</div>
+
+<div class="center">
+  <%= link_to "Denuncie", "http://ouvprod02.saude.gov.br/ouvidor/CadastroDemandaPortal.do", class: "botao-denuncia" %>
+</div>

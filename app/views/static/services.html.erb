@@ -1,0 +1,71 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative">
+    <%= image_tag 'servicos.png' %>
+    <h1>Juntos na batalha contra o HIV!</h1>
+    <h2>Serviço disponível 24 horas.</h2>
+    <%= link_to "Meu perfil", dashboard_path, class: "main-btn" %>
+  </div>
+</section>
+
+<section id="conteudo">
+  <div class="container">
+    <div class="section-title">
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <div class="service shadow">
+          <div class="image">
+            <%= image_tag 'historico.png', class: "img-fluid" %>
+          </div>
+          <h4><a href=""></a>Veja a sua evolução</a></h4>
+          <p>Fazendo seu cadastro você poderá ver o progresso do seu tratamento, ter o controle de suas consultas,
+            observar as receitas que já foram passadas e ver os exames feitos.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="service c shadow">
+          <div class="image">
+            <%= image_tag 'marcacao.png', class: "img-fluid" %>
+          </div>
+          <h4><a href=""></a>Agende suas consultas</a></h4>
+          <p> Facilitamos o processo de agendamento de consultas e exames para você! Tudo o que precisa é escolher uma
+            data e horário disponível em nossa agenda e ver o hospital mais próximo.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="service shadow">
+          <div class="image">
+            <%= image_tag 'remedios.png', class: "img-fluid" %>
+          </div>
+          <h4>Veja onde pegar os medicamentos</h4>
+          <p>Essa área ainda está em construção, mas em breve disponibilizaremos uma lista de locais onde você poderá
+            encontrar
+            seus medicamentos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <p class="destaque"> Vantagens de fazer seu cadastro
+      </p>
+      <div class="center">
+        <ul id="lista" class="col-sm-6">
+          <li class="open"> Seja avisado sempre que uma nova parceria for realizada. </li>
+          <li class="open"> Os nossos serviços são totalmente gratuítos </li>
+          <li class="open"> Tenha contato direto conosco para nos avisar de qualquer problema no sistema, erro, ou
+            novas
+            ideias.
+            Estamos dispostos a te ouvir. </li>
+          <li class="open"> Marque consultas e exames sem sair do conforto da sua casa </li>
+        </ul>
+        <%= image_tag('servico.jpg', id: "img-med") %>
+      </div>
+    </div>
+  </div>
+</section>

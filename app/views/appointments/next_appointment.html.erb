@@ -1,0 +1,38 @@
+<div class="main-content-title">
+  <h2>PRÓXIMA CONSULTA</h2>
+</div>
+
+<br>
+
+<h5>Nome do Paciente</h5>
+<div><%= @appointment.pacient %></div>
+
+<br>
+
+<h5>Título</h5>
+<div><%= @appointment.title %></div>
+
+<br>
+
+<% if @appointment.doctor? %>
+  <h5>Nome do Médico</h5>
+  <div><%= @appointment.doctor %></div>
+
+  <br>
+<% end %>
+
+
+<% if @appointment.description? %>
+  <h5>Descrição</h5>
+  <div><%= @appointment.description %></div>
+
+  <br>
+<% end %>
+
+<h5>Endereço</h5>
+<div><%= @appointment.address %></div>
+
+<br>
+
+<h5>Data da Consulta</h5>
+<div><%= @appointment.date.strftime("%d/%m/%Y as %H:%M") %></div>

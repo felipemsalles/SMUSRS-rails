@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SOS HIV</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="flex-dashboard">
+      <sidebar>
+        <div class="sidebar-title">
+            <h2><%= link_to "SOS HIV", root_path, class: "text-decoration-none" %></h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <i class="fas fa-home"></i>
+              <%= link_to "Dashboard", dashboard_path %>
+            </li>
+            <li>
+              <i class="fas fa-user"></i>
+              <%= link_to "Perfil", dashboard_perfil_path %>
+            </li>
+            <li>
+              <i class="fas fa-file-alt"></i>
+              <%= link_to "Histórico", dashboard_historico_path	%>
+            </li>
+            <li>
+              <i class="fas fa-file-medical"></i>
+              <%= link_to "Consultas", appointments_path %>
+            </li>
+            <li>
+              <i class="fas fa-stethoscope"></i>
+              <%= link_to "Exames", exams_path %>
+            </li>
+          </ul>
+        </div>
+      </sidebar>
+
+      <main>
+        <header>
+          <%= link_to dashboard_path do %>
+            <i class="fas fa-home"></i> Dashboard
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fas fa-sign-out-alt"></i> Logout
+          <% end %>
+        </header>
+        <div class="main-content">
+          <%= yield %>
+        </div>
+      </main>
+
+    </div>
+  </body>
+</html>

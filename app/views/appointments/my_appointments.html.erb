@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Título</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Data</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <th scope="row"><%= appointment.id %></th>
+        <td><%= appointment.pacient %></td>
+        <td><%= appointment.title %></td>
+        <td><%= appointment.address %></td>
+        <td><%= appointment.date.strftime("%d/%m/%Y as %H:%M") %></td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars i-white"></i>
+            </button>
+            <div class="dropdown-menu">
+              <%= link_to "Visualizar", appointment_path(appointment), class: "dropdown-item" %>
+              <%= link_to "Editar", edit_appointment_path(appointment), class: "dropdown-item" %>
+              <%= link_to "Apagar", appointment_path(appointment), method: :delete, data: { confirm: "Confirma a exclusão ?" }, class: "dropdown-item" %>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

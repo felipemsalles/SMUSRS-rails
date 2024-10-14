@@ -1,0 +1,181 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative">
+    <h1>Juntos na batalha contra o HIV!</h1>
+    <h2>Serviço disponível 24 horas.</h2>
+    <%= link_to "Meu perfil", dashboard_path, class: "main-btn" %>
+  </div>
+</section>
+
+<section id="services" class="services mt-5 mb-3 py-3">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="text-center">Serviços</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="service shadow">
+          <div class="icon">
+              <i class="fas fa-question"></i>
+          </div>
+          <h4><%= link_to "Informações", about_path %></h4>
+          <p>Aqui você irá encontrar todas informações necessárias para auxiliar o tratamento contra o HIV!</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <div class="service c shadow">
+          <div class="icon">
+              <i class="fas fa-user-lock"></i>
+          </div>
+          <h4><%= link_to "Acesse sua conta!", dashboard_path %></h4>
+          <p>Entre aqui para acessar a sua conta e ter informações sobre o seu tratamento!</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+        <div class="service shadow">
+          <div class="icon">
+              <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h4><%= link_to "Sobre o projeto", services_path %></h4>
+          <p>Entre aqui para saber como vamos te ajudar no combate a doença!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="camp">
+  <div class="container text-center">
+    <h2 class="py-3">
+      Especialistas
+    </h2>
+</section>
+
+<section id="team" class="team mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="section-title">
+          <h2>Time</h2>
+          <p>Contamos com os melhores especialistas no assunto. Estamos preparados para te ajudar!
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="member">
+              <div class="image">
+                <%= image_tag('doc4.jpg', class: "img-fluid") %>
+              </div>
+              <div class="member-info">
+                <h4>Aline Vitali</h4>
+                <span>Infectologista</span>
+                <p>Especialista em infectologia em Florianópolis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member">
+              <div class="image">
+                <%= image_tag('doc3.jpg', class: "img-fluid") %>
+              </div>
+              <div class="member-info">
+                <h4>Lucas Agra</h4>
+                <span>Infectologista</span>
+                <p>Especialista em infectologia em Ribeirão Preto.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member">
+              <div class="image">
+                <%= image_tag('doc2.jpg', class: "img-fluid") %>
+              </div>
+              <div class="member-info">
+                <h4>Michele Caires</h4>
+                <span>Infectologista</span>
+                <p>Especialista em infectologia em Vitória da Conquista.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member">
+              <div class="image">
+                <%= image_tag('doc1.jpg', class: "img-fluid") %>
+              </div>
+              <div class="member-info">
+                <h4>Simone Martins</h4>
+                <span>Infectologista</span>
+                <p>Especialista em infectologia em Maringá.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+
+    <div class="section-title text-center mt-5">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para receber atendimento!</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contact-box">
+              <i class="fas fa-question"></i>
+              <h3>Dúvidas Frequentes</h3>
+              <p>Saiba as principais dúvidas dos pacientes!</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-box mt-4">
+              <i class="fas fa-envelope"></i>
+              <h3>Envie um Email</h3>
+              <p>smusrs@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-box mt-4">
+              <i class="fas fa-phone"></i>
+              <h3>Ligue</h3>
+              <p>+55 21 91234-5678</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <%= simple_form_for(@doubt, method: :post, url: enviar_duvida_path, remote: true) do |f| %>
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <%= f.input :name, class: "form-control", placeholder: "Nome" %>
+            </div>
+            <div class="col-md-6 form-group">
+              <%= f.input :email, class: "form-control", placeholder: "E-mail" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.input :subject, class: "form-control", placeholder: "Assunto" %>
+          </div>
+          <div class="form-group">
+            <%= f.input :message, class: "form-control", placeholder: "Sua mensagem" %>
+          </div>
+          <div class="cont">
+            <%= f.button :submit, "Enviar Contato", id: "contact-button", class: "doubt-button" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<div class="main-content-title">
+  <h2>MEU EXAME</h2>
+</div>
+
+<br>
+
+<h5>Nome do Paciente</h5>
+<div><%= @exam.pacient %></div>
+
+<br>
+
+<h5>Título</h5>
+<div><%= @exam.title %></div>
+
+<br>
+
+<% if @exam.doctor? %>
+  <h5>Nome do Médico</h5>
+  <div><%= @exam.doctor %></div>
+
+  <br>
+<% end %>
+
+<% if @exam.prescription_url? %>
+  <h5>Link da Receita</h5>
+  <div><%= link_to "Clique aqui", @exam.prescription_url %></div>
+
+  <br>
+<% end %>
+
+<% if @exam.description? %>
+  <h5>Descrição</h5>
+  <div><%= @exam.description %></div>
+
+  <br>
+<% end %>
+
+<h5>Endereço</h5>
+<div><%= @exam.address %></div>
+
+<br>
+
+<h5>Data</h5>
+<div><%= @exam.date.strftime("%d/%m/%Y as %H:%M") %></div>

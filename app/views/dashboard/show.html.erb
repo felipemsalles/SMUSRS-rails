@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-3">
+    <% if @user.gender == "masculino" %>
+      <%= image_tag "boy.png", class: "img" %>
+    <% else %>
+      <%= image_tag "girl.png", class: "img" %>
+    <% end %>
+  </div>
+
+  <div class="col-sm-6">
+      <p class="mt-4">Olá <%= @user.name %>, bem vindo ao seu perfil.</p>
+      <p>
+        Aqui você poderá ver o seu o seu histórico de consultas, agendar
+        novas, ver seus exames e ter detalhes sobre o seu tratamento.
+      </p>
+</div>

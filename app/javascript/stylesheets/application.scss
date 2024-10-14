@@ -1,0 +1,61 @@
+@import "~bootstrap/scss/bootstrap";
+@import "style";
+@import "register";
+@import "fonts";
+@import "login";
+@import "main";
+@import "sidebar";
+@import "main";
+@import "header";
+@import "sobre";
+@import "denuncia";
+@import "historico";
+@import "servico";
+@import "dashboard";
+
+.i-white {
+  color: white;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #6e8efb;
+  border-color: #6e8efb;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+}
+
+.cont2 {
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+}
+
+.dest {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.doubt-button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  width: 175px;
+  display: block;
+  border: none;
+}
+
+.doubt-button:hover {
+  color: #fff;
+  border: none;
+  transform: scale(1.05);
+  transition: .2s;
+  font-size: 16px;
+}
+
+.text-align-none {
+  text-align: initial;
+}
